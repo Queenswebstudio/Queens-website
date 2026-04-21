@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queens Web Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            color: white;
+        }
+        /* NAVBAR */
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 60px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav h2 {
+            color: #00eaff;
+        }
+        
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        
+        nav a:hover {
+            color: #00eaff;
+        }
+        /* HERO */
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero img {
+            width: 180px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-top: 20px;
+        }
+        
+        .hero p {
+            color: #aaa;
+            margin-top: 10px;
+        }
+        
+        .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: none;
+            background: linear-gradient(45deg, #00eaff, #0077ff);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 20px #00eaff;
+        }
+        /* SECTION */
+        
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+        /* GLASS CARDS */
+        
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            width: 260px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 0 25px #00eaff;
+        }
+        /* PRICING */
+        
+        .pricing {
+            font-size: 2rem;
+            margin-top: 20px;
+            color: #00eaff;
+        }
+        /* CONTACT */
+        
+        input,
+        textarea {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+        }
+        
+        textarea {
+            height: 120px;
+        }
+        /* WHATSAPP BUTTON */
+        
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 0 15px #25D366;
+        }
+        /* FOOTER */
+        
+        footer {
+            padding: 20px;
+            background: #020617;
+        }
+        /* Pricing box upgrade */
+        
+        .pricing-box {
+            background: #111827;
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        
+        .pricing-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px #00d4ff;
+        }
+        /* Contact */
+        
+        .contact-info {
+            background: #111827;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 20px auto;
+        }
+        
+        .contact-form {
+            margin-top: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        
+        .contact-link {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        
+        .contact-link:hover {
+            text-decoration: underline;
+            color: #00ffff;
+        }
+        
+        .contact-link {
+            color: #00d4ff !important;
+            text-decoration: none;
+        }
+        
+        .contact-link:hover {
+            color: #00ffff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Queens Web Studio</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <img src="logo.png">
+        <h1>We Build Websites, Software & AI</h1>
+        <p>Premium Digital Solutions for Modern Businesses</p>
+        <button class="btn" onclick="scrollToContact()">Get in Touch</button>
+    </div>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Queens Web Studio is a modern startup delivering high-quality websites, software, and AI solutions with a focus on design, performance, and innovation.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Website Development</h3>
+                <p>Fast, responsive & aesthetic websites.</p>
+            </div>
+            <div class="card">
+                <h3>Software Development</h3>
+                <p>Custom solutions for your business.</p>
+            </div>
+            <div class="card">
+                <h3>AI Solutions</h3>
+                <p>Smart AI tools & automation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Pricing</h2>
+
+        <div class="pricing-box">
+            <h3>₹1k – ₹25k</h3>
+            <p>Flexible pricing based on your requirements</p>
+            <button class="btn" onclick="scrollToContact()">Get Quote</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-info">
+            <p>
+                📧
+                <a href="https://mail.google.com/mail/?view=cm&to=ramkaranika@gmail.com" target="_blank">
+    ramkaranika@gmail.com
+</a>
+            </p>
+
+            <p>
+                💬
+                <a href="https://wa.me/919892738698" target="_blank" class="contact-link">
+            Chat on WhatsApp
+        </a>
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name"><br>
+            <input type="email" placeholder="Your Email"><br>
+            <textarea placeholder="Your Message"></textarea><br>
+            <button class="btn">Send Message</button>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919892738698" class="whatsapp">💬</a>
+
+    <footer>
+        <p>© 2026 Queens Web Studio</p>
+    </footer>
+
+    <script>
+        function scrollToContact() {
+            document.getElementById("contact").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+
+</html>
